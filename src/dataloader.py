@@ -1,6 +1,8 @@
 import threading
 import random
 
+import sys
+
 import torch
 import torch.multiprocessing as multiprocessing
 from torch.utils.data import DataLoader
@@ -17,7 +19,7 @@ from torch.utils.data._utils import ExceptionWrapper
 from torch.utils.data._utils import IS_WINDOWS
 from torch.utils.data._utils.worker import ManagerWatchdog
 
-from torch._six import queue
+import queue
 
 def _ms_loop(dataset, index_queue, data_queue, done_event, collate_fn, scale, seed, init_fn, worker_id):
     try:
