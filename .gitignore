@@ -58,7 +58,7 @@ docs/_build/
 target/
 
 # PyTorch
-*.pt
+
 *.pdf
 *.png
 *.txt
