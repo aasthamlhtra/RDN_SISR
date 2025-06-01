@@ -68,3 +68,7 @@ Compared to previous models (SRCNN, VDSR, SRDenseNet), RDN provides superior per
 
 
 
+##  Acknowledgements
+
+This project is based on the original [EDSR-PyTorch](https://github.com/sanghyun-son/EDSR-PyTorch) repository by Sanghyun Son.  
+The original implementation is licensed under the MIT License © 2018 Sanghyun Son.
