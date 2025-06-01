@@ -27,7 +27,7 @@ Compared to previous models (SRCNN, VDSR, SRDenseNet), RDN provides superior per
 
 ---
 
-## 🛠 Methodology
+##  Methodology
 
 - **Architecture**:
   - 2-layer shallow feature extractor (SFENet)
