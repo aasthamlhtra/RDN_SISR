@@ -34,8 +34,10 @@ ENV/
 Thumbs.db
 
 # Large model files (optional - remove if you want to push them)
-# *.pth
-# *.pt
+*.pth
+*.pt
+!experiment/RDN_X4/model/model_best.pt
+
 
 # Logs
 *.log
