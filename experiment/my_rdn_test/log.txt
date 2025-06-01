@@ -1,0 +1,81 @@
+RDN(
+  (SFENet1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (SFENet2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (RDBs): ModuleList(
+    (0-15): 16 x RDB(
+      (convs): Sequential(
+        (0): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (1): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (2): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(192, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (3): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (4): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(320, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (5): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (6): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(448, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+        (7): RDB_Conv(
+          (conv): Sequential(
+            (0): Conv2d(512, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU()
+          )
+        )
+      )
+      (LFF): Conv2d(576, 64, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (GFF): Sequential(
+    (0): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (UPNet): Sequential(
+    (0): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(upscale_factor=2)
+    (2): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): PixelShuffle(upscale_factor=2)
+    (4): Conv2d(64, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+
+Evaluation:
+[Set5 x4]	PSNR: 31.565 (Best: 31.565 @epoch 1)
+[Set14 x4]	PSNR: 28.230 (Best: 28.230 @epoch 1)
+[B100 x4]	PSNR: 27.304 (Best: 27.304 @epoch 1)
+[Urban100 x4]	PSNR: 25.265 (Best: 25.265 @epoch 1)
+Forward: 182.14s
+
+Saving...
+Total: 183.15s
+
