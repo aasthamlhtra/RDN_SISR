@@ -7,7 +7,7 @@ This repository contains the implementation and experimentation of a **Residual 
 ## Project Highlights
 
 -  Implemented RDN in **PyTorch** with modular components  
--  Extended original RDN by increasing the number of residual dense blocks  
+-  Extended original RDN by tuning the architecture 
 -  Achieved **PSNR of 29.144 dB** with 16 RDBs and **29.264 dB** with 32 RDBs on DIV2K validation  
 -  Evaluated performance on Set5, Set14, B100, Urban100 datasets  
 -  Conducted depth-performance tradeoff analysis  
